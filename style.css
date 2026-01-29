@@ -4,6 +4,7 @@
    VARIÁVEIS DE CORES
 ========================= */
 :root {
+  color-scheme: light; /* força modo claro */
   --marrom-escuro: #4a3428;
   --marrom: #6b4f3f;
   --marrom-claro: #a07a5a;
@@ -12,6 +13,7 @@
   --dourado: #c2a14d;
   --texto: #2b2b2b;
 }
+
 
 /* =========================
    RESET BÁSICO
@@ -426,4 +428,21 @@ footer {
   .menu ul li a {
     font-size: 0.85rem;
   }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: var(--marfim) !important;
+    color: var(--texto) !important;
+  }
+
+  header {
+    background: linear-gradient(to bottom, var(--marrom-escuro), var(--marrom)) !important;
+  }
+
+  .menu.active {
+    background: linear-gradient(to bottom, var(--marrom-escuro), var(--marrom)) !important;
+  }
+
+  /* adicione outras cores que precise manter fixas */
 }
