@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap');
+
+/* =========================
+   VARIÁVEIS DE CORES
+========================= */
+:root {
+  --marrom-escuro: #4a3428;
+  --marrom: #6b4f3f;
+  --marrom-claro: #a07a5a;
+  --marfim: #f9f6f1;
+  --bege: #efe7dc;
+  --dourado: #c2a14d;
+  --texto: #2b2b2b;
+}
+
+/* =========================
+   RESET BÁSICO
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--marfim);
+  color: var(--texto);
+  line-height: 1.8;
+  font-size: 0.95rem; /* base mobile */
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+  background: linear-gradient(to bottom, var(--marrom-escuro), var(--marrom));
+  color: white;
+  padding: 1.5rem 1rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem; /* mobile */
+  margin-bottom: 1rem;
+}
+
+nav ul {
+  display: flex;
+  gap: 0.8rem;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #f5f1eb;
+  text-decoration: none;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+nav a:hover {
+  color: var(--dourado);
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+  background: linear-gradient(to right, var(--bege), var(--marfim));
+  padding: 3rem 1rem 3rem;
+}
+
+.hero-conteudo {
+  max-width: 100%;
+  margin: auto;
+}
+
+.hero h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--marrom-escuro);
+}
+
+.hero p {
+  max-width: 100%;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.hero-acoes {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* =========================
+   BOTÕES
+========================= */
+.botao {
+  padding: 0.8rem 1.8rem;
+  background: var(--dourado);
+  color: #2b2b2b;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: all 0.25s ease;
+}
+
+.botao:hover {
+  background: var(--marrom-claro);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.botao--secundario {
+  background: transparent;
+  border: 1px solid var(--marrom-claro);
+  color: var(--marrom-escuro);
+}
+
+.botao--secundario:hover {
+  background: var(--marrom-claro);
+  color: white;
+}
+
+/* =========================
+   CONTEÚDO PRINCIPAL
+========================= */
+main {
+  max-width: 100%;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+section h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* =========================
+   JUBILEU SANJUANISTA
+========================= */
+.jubileu {
+  background: var(--bege);
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  max-width: 100%;
+  margin: auto;
+}
+
+.jubileu p {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.jubileu-acoes {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* ÍCONES DISCRETOS – JUBILEU */
+.jubileu-itens {
+  display: grid;
+  grid-template-columns: 1fr; /* mobile: 1 coluna */
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.jubileu-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+}
+
+.jubileu-item svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  stroke: var(--marrom-claro);
+  stroke-width: 1.5;
+  fill: none;
+}
+
+.jubileu-item p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* =========================
+   CALENDÁRIO
+========================= */
+#calendario {
+  max-width: 1000px; /* limite para telas grandes */
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.calendario {
+  display: grid;
+  grid-template-columns: 1fr; /* mobile first: 1 coluna */
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.evento {
+  background: white;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.evento data {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--marrom);
+}
+
+.evento h3 {
+  font-family: 'Cormorant Garamond', serif;
+  margin: 0.5rem 0;
+}
+
+.evento p {
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  background: var(--marrom-escuro);
+  color: #eae3da;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.75rem;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+/* Tablets (600px - 900px) */
+@media (min-width: 600px) {
+  .jubileu-itens {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .calendario {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  body {
+    font-size: 1rem;
+  }
+}
+
+/* Notebooks e telas grandes (900px+) */
+@media (min-width: 900px) {
+  .jubileu-itens {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .calendario {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .hero h2 {
+    font-size: 2.4rem;
+  }
+
+  main {
+    padding: 3rem 2rem;
+  }
+
+  .jubileu {
+    padding: 3rem 2rem;
+  }
+
+  .hero-acoes {
+    gap: 1rem;
+  }
+}
+
+/* =========================
+   HAMBURGER MENU PROFISSIONAL
+========================= */
+
+.menu-toggle {
+  position: relative;       /* necessário para linhas absolutas */
+  display: block;
+  width: 50px;              /* largura confortável */
+  height: 40px;             /* altura confortável */
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 200;
+}
+
+.menu-toggle span {
+  position: absolute;       /* linhas absolutas */
+  left: 50%;                /* centraliza horizontal */
+  width: 80%;               /* comprimento da linha */
+  height: 4px;              /* grosso e visível */
+  background: white;
+  border-radius: 2px;
+  transform: translateX(-50%); /* centraliza perfeitamente */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Posicionamento vertical das linhas */
+.menu-toggle span:nth-child(1) {
+  top: 10%;   /* linha superior */
+}
+
+.menu-toggle span:nth-child(2) {
+  top: 50%;   /* linha do meio */
+  transform: translate(-50%, -50%);
+}
+
+.menu-toggle span:nth-child(3) {
+  bottom: 10%; /* linha inferior */
+}
+
+/* Ativo: cria o X */
+.menu-toggle.active span:nth-child(1) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0; /* desaparece */
+}
+
+.menu-toggle.active span:nth-child(3) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* =========================
+   MENU MOBILE
+========================= */
+.menu {
+  display: none;
+}
+
+.menu ul {
+  list-style: none;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem 1rem;
+}
+
+.menu ul li a {
+  color: #f5f1eb;
+  text-decoration: none;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  display: block;
+}
+
+/* Menu ativo */
+.menu.active {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom, var(--marrom-escuro), var(--marrom));
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem 0;
+  z-index: 150;
+}
+
+/* =========================
+   MENU DESKTOP
+========================= */
+@media (min-width: 900px) {
+  .menu-toggle {
+    display: none; /* esconde hamburger em desktop */
+  }
+
+  .menu {
+    display: flex !important;
+    position: static;
+    background: none;
+  }
+
+  .menu ul {
+    flex-direction: row;
+    gap: 1.2rem;
+    padding: 0;
+  }
+
+  .menu ul li a {
+    font-size: 0.85rem;
+  }
+}
