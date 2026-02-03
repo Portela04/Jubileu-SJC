@@ -1,448 +1,266 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap');
-
-/* =========================
-   VARIÁVEIS DE CORES
-========================= */
+/* --- Variáveis de Cores (Tema Carmelo) --- */
 :root {
-  color-scheme: light; /* força modo claro */
-  --marrom-escuro: #4a3428;
-  --marrom: #6b4f3f;
-  --marrom-claro: #a07a5a;
-  --marfim: #f9f6f1;
-  --bege: #efe7dc;
-  --dourado: #c2a14d;
-  --texto: #2b2b2b;
+    --marrom-carmelo: #4e3629;
+    --bege-claro: #f4f1ea;
+    --dourado: #c5a059;
+    --texto-escuro: #333;
+    --branco: #ffffff;
 }
 
-
-/* =========================
-   RESET BÁSICO
-========================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* --- Rolagem suave --- */
+html {
+    scroll-behavior: smooth;
 }
 
+/* --- Configurações Globais --- */
 body {
-  font-family: 'Inter', sans-serif;
-  background: var(--marfim);
-  color: var(--texto);
-  line-height: 1.8;
-  font-size: 0.95rem; /* base mobile */
-}
-
-/* =========================
-   HEADER
-========================= */
-header {
-  background: linear-gradient(to bottom, var(--marrom-escuro), var(--marrom));
-  color: white;
-  padding: 1.5rem 1rem 1rem;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-header h1 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.5rem; /* mobile */
-  margin-bottom: 1rem;
-}
-
-nav ul {
-  display: flex;
-  gap: 0.8rem;
-  list-style: none;
-  flex-wrap: wrap;
-}
-
-nav a {
-  color: #f5f1eb;
-  text-decoration: none;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-nav a:hover {
-  color: var(--dourado);
-}
-
-/* =========================
-   HERO
-========================= */
-.hero {
-  background: linear-gradient(to right, var(--bege), var(--marfim));
-  padding: 3rem 1rem 3rem;
-}
-
-.hero-conteudo {
-  max-width: 100%;
-  margin: auto;
-}
-
-.hero h2 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  color: var(--marrom-escuro);
-}
-
-.hero p {
-  max-width: 100%;
-  margin-bottom: 1.5rem;
-  font-size: 0.95rem;
-}
-
-.hero-acoes {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-
-/* =========================
-   BOTÕES
-========================= */
-.botao {
-  padding: 0.8rem 1.8rem;
-  background: var(--dourado);
-  color: #2b2b2b;
-  text-decoration: none;
-  border-radius: 6px;
-  font-size: 0.8rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  transition: all 0.25s ease;
-}
-
-.botao:hover {
-  background: var(--marrom-claro);
-  color: white;
-  transform: translateY(-2px);
-}
-
-.botao--secundario {
-  background: transparent;
-  border: 1px solid var(--marrom-claro);
-  color: var(--marrom-escuro);
-}
-
-.botao--secundario:hover {
-  background: var(--marrom-claro);
-  color: white;
-}
-
-/* =========================
-   CONTEÚDO PRINCIPAL
-========================= */
-main {
-  max-width: 100%;
-  margin: auto;
-  padding: 2rem 1rem;
-}
-
-section {
-  margin-bottom: 3rem;
-}
-
-section h2 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-/* =========================
-   JUBILEU SANJUANISTA
-========================= */
-.jubileu {
-  background: var(--bege);
-  padding: 2rem 1rem;
-  border-radius: 12px;
-  max-width: 100%;
-  margin: auto;
-}
-
-.jubileu p {
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
-}
-
-.jubileu-acoes {
-  margin-top: 1.5rem;
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-
-/* ÍCONES DISCRETOS – JUBILEU */
-.jubileu-itens {
-  display: grid;
-  grid-template-columns: 1fr; /* mobile: 1 coluna */
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.jubileu-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.7rem;
-}
-
-.jubileu-item svg {
-  width: 20px;
-  height: 20px;
-  flex-shrink: 0;
-  stroke: var(--marrom-claro);
-  stroke-width: 1.5;
-  fill: none;
-}
-
-.jubileu-item p {
-  font-size: 0.9rem;
-  line-height: 1.5;
-}
-
-/* =========================
-   CALENDÁRIO
-========================= */
-#calendario {
-  max-width: 1000px; /* limite para telas grandes */
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-.calendario {
-  display: grid;
-  grid-template-columns: 1fr; /* mobile first: 1 coluna */
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-}
-
-.evento {
-  background: white;
-  border-radius: 10px;
-  padding: 1rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.evento data {
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  color: var(--marrom);
-}
-
-.evento h3 {
-  font-family: 'Cormorant Garamond', serif;
-  margin: 0.5rem 0;
-}
-
-.evento p {
-  font-size: 0.85rem;
-  margin-bottom: 0.5rem;
-}
-
-/* =========================
-   FOOTER
-========================= */
-footer {
-  background: var(--marrom-escuro);
-  color: #eae3da;
-  text-align: center;
-  padding: 1.5rem;
-  font-size: 0.75rem;
-}
-
-/* =========================
-   RESPONSIVIDADE
-========================= */
-
-/* Tablets (600px - 900px) */
-@media (min-width: 600px) {
-  .jubileu-itens {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-  }
-
-  .calendario {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  header h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero h2 {
-    font-size: 2rem;
-  }
-
-  body {
-    font-size: 1rem;
-  }
-}
-
-/* Notebooks e telas grandes (900px+) */
-@media (min-width: 900px) {
-  .jubileu-itens {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .calendario {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  header h1 {
-    font-size: 2rem;
-  }
-
-  .hero h2 {
-    font-size: 2.4rem;
-  }
-
-  main {
-    padding: 3rem 2rem;
-  }
-
-  .jubileu {
-    padding: 3rem 2rem;
-  }
-
-  .hero-acoes {
-    gap: 1rem;
-  }
-}
-
-/* =========================
-   HAMBURGER MENU PROFISSIONAL
-========================= */
-
-.menu-toggle {
-  position: relative;       /* necessário para linhas absolutas */
-  display: block;
-  width: 50px;              /* largura confortável */
-  height: 40px;             /* altura confortável */
-  background: none;
-  border: none;
-  cursor: pointer;
-  z-index: 200;
-}
-
-.menu-toggle span {
-  position: absolute;       /* linhas absolutas */
-  left: 50%;                /* centraliza horizontal */
-  width: 80%;               /* comprimento da linha */
-  height: 4px;              /* grosso e visível */
-  background: white;
-  border-radius: 2px;
-  transform: translateX(-50%); /* centraliza perfeitamente */
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-/* Posicionamento vertical das linhas */
-.menu-toggle span:nth-child(1) {
-  top: 10%;   /* linha superior */
-}
-
-.menu-toggle span:nth-child(2) {
-  top: 50%;   /* linha do meio */
-  transform: translate(-50%, -50%);
-}
-
-.menu-toggle span:nth-child(3) {
-  bottom: 10%; /* linha inferior */
-}
-
-/* Ativo: cria o X */
-.menu-toggle.active span:nth-child(1) {
-  top: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
-}
-
-.menu-toggle.active span:nth-child(2) {
-  opacity: 0; /* desaparece */
-}
-
-.menu-toggle.active span:nth-child(3) {
-  top: 50%;
-  transform: translate(-50%, -50%) rotate(-45deg);
-}
-
-/* =========================
-   MENU MOBILE
-========================= */
-.menu {
-  display: none;
-}
-
-.menu ul {
-  list-style: none;
-  flex-direction: column;
-  gap: 1.5rem;
-  padding: 1.5rem 1rem;
-}
-
-.menu ul li a {
-  color: #f5f1eb;
-  text-decoration: none;
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  display: block;
-}
-
-/* Menu ativo */
-.menu.active {
-  display: flex;
-  flex-direction: column;
-  background: linear-gradient(to bottom, var(--marrom-escuro), var(--marrom));
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  padding: 1.5rem 0;
-  z-index: 150;
-}
-
-/* =========================
-   MENU DESKTOP
-========================= */
-@media (min-width: 900px) {
-  .menu-toggle {
-    display: none; /* esconde hamburger em desktop */
-  }
-
-  .menu {
-    display: flex !important;
-    position: static;
-    background: none;
-  }
-
-  .menu ul {
-    flex-direction: row;
-    gap: 1.2rem;
+    font-family: 'Georgia', serif;
+    margin: 0;
     padding: 0;
-  }
-
-  .menu ul li a {
-    font-size: 0.85rem;
-  }
+    line-height: 1.6;
+    background-color: var(--bege-claro);
+    color: var(--texto-escuro);
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    background: var(--marfim) !important;
-    color: var(--texto) !important;
-  }
+/* --- Cabeçalho e Navegação --- */
+.cabecalho-principal {
+    background-color: var(--marrom-carmelo);
+    color: var(--branco);
+    padding: 1rem 0;
+    position: sticky; /* Menu fixo no topo quando rolar */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
 
-  header {
-    background: linear-gradient(to bottom, var(--marrom-escuro), var(--marrom)) !important;
-  }
+.navegacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-  .menu.active {
-    background: linear-gradient(to bottom, var(--marrom-escuro), var(--marrom)) !important;
-  }
+.logotipo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--dourado);
+}
 
-  /* adicione outras cores que precise manter fixas */
+.lista-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.lista-menu li {
+    margin-left: 20px;
+}
+
+.link-menu {
+    color: var(--branco);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.link-menu:hover {
+    color: var(--dourado);
+}
+
+/* --- Seção de Capa --- */
+.capa-destaque {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('imagem-capa.jpeg');
+    background-size: cover;
+    background-position: center center;
+    height: 80vh; /* 80% da altura da tela */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--branco);
+}
+
+.titulo-principal {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitulo-capa {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.botao-acao {
+    background-color: var(--dourado);
+    color: var(--marrom-carmelo);
+    padding: 10px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    display: inline-block;
+}
+
+.botao-acao:hover {
+    background-color: var(--branco);
+}
+
+/* --- Estrutura de Conteúdo --- */
+.conteiner-limite {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.texto-centralizado {
+    text-align: center;
+}
+
+.titulo-secao {
+    text-align: center;
+    color: var(--marrom-carmelo);
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    border-bottom: 2px solid var(--dourado);
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.paragrafo-destaque {
+    font-size: 1.2rem;
+}
+
+.grade-duas-colunas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+/* --- Chamada para Biografia --- */
+.chamada-biografia {
+    background-color: var(--branco);
+    padding: 60px 20px;
+    border-top: 2px solid var(--dourado);
+    border-bottom: 2px solid var(--dourado);
+}
+
+.conteudo-chamada {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.chamada-biografia .botao-acao {
+    margin-top: 20px;
+}
+
+/* --- Cartões e Programação --- */
+.cartao-informativo {
+    background: var(--branco);
+    padding: 20px;
+    border-left: 5px solid var(--dourado);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.titulo-cartao {
+    color: var(--marrom-carmelo);
+    margin-top: 0;
+}
+
+.item-evento {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    padding: 15px 0;
+}
+
+.item-evento:last-child {
+    border-bottom: none;
+}
+
+.data-evento {
+    font-weight: bold;
+    color: var(--marrom-carmelo);
+    min-width: 120px;
+}
+
+/* --- Linha do Tempo Vertical --- */
+.linha-do-tempo {
+    position: relative;
+    margin-top: 30px;
+    padding-left: 30px;
+    border-left: 3px solid var(--dourado);
+}
+
+.marco-temporal {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.marco-temporal:last-child {
+    margin-bottom: 0;
+}
+
+.ano-temporal {
+    position: absolute;
+    left: -65px;
+    top: 0;
+    background-color: var(--dourado);
+    color: var(--marrom-carmelo);
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.conteudo-temporal h4 {
+    margin: 0 0 5px 0;
+    color: var(--marrom-carmelo);
+}
+
+.conteudo-temporal p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.lista-escritos {
+    padding-left: 20px;
+}
+
+.lista-escritos li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* --- Rodapé --- */
+.rodape-site {
+    background-color: var(--marrom-carmelo);
+    color: var(--branco);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 60px;
+}
+
+/* --- Responsividade para celular --- */
+@media (max-width: 768px) {
+    .grade-duas-colunas {
+        grid-template-columns: 1fr; /* Vira uma coluna só no celular */
+    }
+    
+    .titulo-principal {
+        font-size: 2rem;
+    }
+    
+    /* Esconde o menu no celular (simplificação) */
+    .lista-menu {
+        display: none; 
+    }
+
+    #programacao {
+    scroll-margin-top: 100px;
+
+}
 }

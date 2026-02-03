@@ -1,135 +1,99 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ano Jubilar – São João da Cruz</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ano Jubilar - São João da Cruz</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>Ano Jubilar de São João da Cruz</h1>
-
-        <!-- BOTÃO HAMBURGER -->
-        <button class="menu-toggle" aria-label="Abrir menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-
-        <nav class="menu">
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="construcao.html">São João da Cruz</a></li>
-                <li><a href="construcao.html">Textos Papais</a></li>
-                <li><a href="construcao.html">Devocionário</a></li>
-                <li><a href="construcao.html">Sites e Links</a></li>
+    <header class="cabecalho-principal">
+        <nav class="navegacao">
+            <div class="logotipo">Jubileu Sanjuanista</div>
+            <ul class="lista-menu">
+                <li><a href="#" class="link-menu">Início</a></li>
+                <li><a href="sjc.html" class="link-menu">São João da Cruz</a></li>
+                <li><a href="textos-papais.html" class="link-menu">Textos Papais</a></li>
+                <li><a href="devocionario.html" class="link-menu">Devocionário</a></li>
+                <li><a href="#" class="link-menu">Sites e Links</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- HERO COMERCIAL -->
-    <section class="hero">
-        <div class="hero-conteudo">
-            <h2>Um ano para aprofundar a mística de São João da Cruz</h2>
-            <p>
-                Celebrações, encontros acadêmicos, textos espirituais
-                e iniciativas pastorais ao longo do Ano Jubilar.
-            </p>
-
-            <div class="hero-acoes">
-                <a href="#calendario" class="botao js-scroll">Ver programação</a>
-                <a href="construcao.html" class="botao botao--secundario">
-                    Conhecer o Santo
-                </a>
-            </div>
+    <section class="capa-destaque">
+        <div class="conteudo-capa">
+            <h1 class="titulo-principal">Ano Jubilar de São João da Cruz</h1>
+            <p class="subtitulo-capa">"No entardecer da vida, seremos julgados pelo amor."</p>
+            <a href="#programacao" class="botao-acao">Ver Programação</a>
         </div>
     </section>
 
-    <main>
-
-        <!-- Sobre o ano Jubilar -->
-        <section class="intro">
-            <h2>Sobre o Ano Jubilar</h2>
-            <p>
-                O Ano Jubilar de São João da Cruz celebra os marcos históricos
-                de sua canonização e de seu reconhecimento como Doutor da Igreja,
-                convidando fiéis, pesquisadores e amantes da espiritualidade
-                a aprofundarem sua obra mística, teológica e poética.
+    <section class="conteiner-limite">
+        <div class="texto-centralizado">
+            <h2 class="titulo-secao">O Jubileu Sanjuanista</h2>
+            <p class="paragrafo-destaque">
+                Celebramos um tempo de profunda renovação espiritual. O Jubileu Sanjuanista é um convite
+                para redescobrir a "Chama de Amor Viva" que habita em cada um de nós. É o momento de
+                aprofundar o conhecimento da doutrina do Doutor Místico e caminhar rumo à união com Deus.
             </p>
-        </section>
+        </div>
+    </section>
 
-        <section class="jubileu">
-            <h2>O que é o Jubileu Sanjuanista</h2>
+    <section class="conteiner-limite chamada-biografia">
+        <div class="conteudo-chamada">
+            <h2 class="titulo-secao">Quem foi São João da Cruz?</h2>
+            <p class="paragrafo-destaque">
+                Místico, poeta e Doutor da Igreja. Conheça a vida, o caminho espiritual
+                e os escritos de São João da Cruz, mestre da noite e da luz interior.
+            </p>
+            <a href="sjc.html" class="botao-acao">
+                Conhecer São João da Cruz
+            </a>
+        </div>
+    </section>
 
-            <div class="jubileu-itens">
+    <section class="conteiner-limite grade-duas-colunas">
 
-                <div class="jubileu-item">
-                    <!-- CHAMA -->
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M12 3
-                 C9 7, 14 9, 10 13
-                 C7 16, 9 21, 12 21
-                 C15 21, 17 17, 15 14
-                 C14 12, 13 10, 12 9" />
-                    </svg>
-                    <p>
-                        Um tempo de aprofundamento da experiência espiritual de São João da Cruz,
-                        marcado pela purificação interior e pela busca da união com Deus.
-                    </p>
-                </div>
+        <div class="cartao-informativo">
+            <h3 class="titulo-cartao">Sobre o Ano Jubilar</h3>
+            <p>Este ano marca uma data especial para a Ordem do Carmelo Descalço e para toda a Igreja.
+                Através de peregrinações, conferências e liturgias, buscamos as indulgências e a graça
+                de compreender melhor o caminho do "Nada" para chegar ao "Tudo".</p>
+        </div>
 
-                <div class="jubileu-item">
-                    <!-- ESTRELA -->
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M12 3l2.2 5.5L20 9l-4 4
-                 1 6-5-3-5 3
-                 1-6-4-4 5.8-.5z" />
-                    </svg>
-                    <p>
-                        Um itinerário iluminado pela sabedoria mística, que orienta o
-                        discernimento espiritual no meio da noite da fé.
-                    </p>
-                </div>
+        <div id="programacao" class="cartao-informativo">
+            <h3 class="titulo-cartao">Programação dos Eventos</h3>
 
-                <div class="jubileu-item">
-                    <!-- CAMINHO / MONTANHA -->
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M3 19L12 5l9 14M12 5v14" />
-                    </svg>
-                    <p>
-                        Um caminho de subida interior, vivido por meio de celebrações,
-                        estudos, encontros e propostas formativas ao longo do Ano Jubilar.
-                    </p>
-                </div>
-
+            <div class="item-evento">
+                <span class="data-evento">14 Dezembro</span>
+                <span class="descricao-evento">Missa Solene de Abertura</span>
             </div>
 
-            <div class="jubileu-acoes">
-                <a href="sao-joao.html" class="botao botao--secundario">
-                    Conhecer São João da Cruz
-                </a>
+            <div class="item-evento">
+                <span class="data-evento">20 Março</span>
+                <span class="descricao-evento">Retiro de Quaresma Sanjuanista</span>
             </div>
-        </section>
 
-
-        <section>
-            <h2>Programação Comemorativa</h2>
-            <div class="calendario" id="calendario">
-                <!-- Eventos via JavaScript -->
+            <div class="item-evento">
+                <span class="data-evento">15 Julho</span>
+                <span class="descricao-evento">Simpósio: A Subida do Monte Carmelo</span>
             </div>
-        </section>
 
-    </main>
+            <div class="item-evento">
+                <span class="data-evento">14 Dezembro</span>
+                <span class="descricao-evento">Encerramento do Ano Jubilar</span>
+            </div>
+        </div>
 
-    <footer>
-        <p>© Ano Jubilar de São João da Cruz · Carmelo & Pesquisa</p>
+    </section>
+
+    <footer class="rodape-site">
+        <p>&copy; 2024 Ano Jubilar de São João da Cruz | Ordem do Carmelo Descalço</p>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 
 </html>
